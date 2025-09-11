@@ -6,65 +6,55 @@ import Link from "next/link"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Hotel management system",
     description:
-      "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and admin dashboard.",
-    image: "/modern-ecommerce-dashboard.png",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+      "Features include user inscription, authentication, filtering suites , adding comments , booking management, room inventory, and admin dashboard.",
+    image: "/hotel-cover.png",
+    technologies: ["JavaScript", "Laravel", "MySQL"],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/YASSINE92-coder/ecommerce-platform",
     featured: true,
   },
   {
-    title: "Task Management App",
+    title: "Product Management App",
     description:
-      "A collaborative task management application built with Next.js and real-time updates. Includes team collaboration, project tracking, and deadline management.",
-    image: "/task-management-app.png",
-    technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io", "Tailwind CSS"],
+      " MVC architecture , deadline management and data manipulation.",
+    image: "/productmanager-cover.png",
+    technologies: ["Express", "MongoDB", "JavaScript", "Tailwind CSS"],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/YASSINE92-coder/task-manager",
     featured: true,
   },
   {
-    title: "Weather Analytics Dashboard",
+    title: "Movies App",
     description:
-      "A data visualization dashboard that displays weather patterns and analytics using Chart.js and external APIs. Features interactive charts and location-based forecasts.",
-    image: "/weather-analytics-dashboard-charts.jpg",
+      "A backend service for a movies application that provides movie data and recommendations using chatboot integration.",
+    image: "/movieapp.png",
     technologies: ["Vue.js", "Chart.js", "Express", "MongoDB", "OpenWeather API"],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/YASSINE92-coder/weather-dashboard",
     featured: false,
   },
   {
-    title: "Social Media API",
+    title: "Weather App - backend",
     description:
-      "RESTful API for a social media platform with user authentication, post management, real-time messaging, and content moderation features.",
-    image: "/api-documentation-interface.jpg",
-    technologies: ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker"],
+      "A backend service for a weather application that provides real-time weather data and forecasts using external APIs.",
+    image: "https://cdn.jim-nielsen.com/ios/512/weather-2021-12-07.png?rf=1024",
+    technologies: ["node.js", "Express", "OpenWeather API"],
     liveUrl: "https://api-docs.example.com",
     githubUrl: "https://github.com/YASSINE92-coder/social-api",
-    featured: false,
+    featured: false, 
   },
   {
-    title: "Portfolio Website",
+    title: "Interior Design",
     description:
-      "A responsive portfolio website built with modern web technologies. Features smooth animations, dark mode support, and optimized performance.",
-    image: "/modern-portfolio-website.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "A responsive interior design website built with modern web frameworks and technologies. Features smooth animations, dark mode support, and optimized performance.",
+    image: "/nomahd.png",
+    technologies: ["HTML", "JavaScript", "Bootstrap"],
     liveUrl: "https://yassine-portfolio.com",
     githubUrl: "https://github.com/YASSINE92-coder/portfolio",
     featured: false,
-  },
-  {
-    title: "AI Chat Application",
-    description:
-      "An intelligent chat application powered by AI with natural language processing, context awareness, and multi-language support.",
-    image: "/ai-chat-interface.png",
-    technologies: ["React", "Python", "OpenAI API", "WebSocket", "Docker"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/YASSINE92-coder/ai-chat",
-    featured: false,
-  },
+  }
 ]
 
 export function ProjectsSection() {
