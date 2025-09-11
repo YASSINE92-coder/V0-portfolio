@@ -14,10 +14,11 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-8">
           {/* Profile Image */}
+          <br /><br /><br /><br />
           <div className="relative mx-auto w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
-            <img src="/professional-developer-headshot.png" alt="Yassine Chaanoune" className="w-full h-full object-cover" />
+            <img src="/profile-github.jpg" alt="Yassine Chaanoune" className="w-full h-full object-cover" />
           </div>
-
+    
           {/* Main Heading */}
           <div className="space-y-4">
             <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl text-balance">

@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="#home" className="font-heading font-bold text-2xl text-primary">
-              Yassine Chaanoune
+              YC
             </Link>
             <p className="text-muted-foreground text-sm text-pretty">
               Full Stack Developer passionate about creating modern web applications and digital experiences that make a
@@ -36,7 +36,6 @@ export function Footer() {
               </Link>
             </nav>
           </div>
-
           {/* Connect */}
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Connect</h3>
