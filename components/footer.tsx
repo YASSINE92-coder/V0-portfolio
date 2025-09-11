@@ -54,7 +54,7 @@ export function Footer() {
                 </Link>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <Link href="mailto:yassine.chaanoune@example.com">
+                <Link href="mailto:yassinechaanoune039@email.com">
                   <Mail className="h-4 w-4" />
                   <span className="sr-only">Email</span>
                 </Link>
@@ -71,9 +71,7 @@ export function Footer() {
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Yassine Chaanoune. All rights reserved.
           </p>
-          <p className="text-muted-foreground text-sm flex items-center mt-2 sm:mt-0">
-            Made with <Heart className="h-3 w-3 mx-1 text-red-500" /> using Next.js & Tailwind CSS
-          </p>
+          
         </div>
       </div>
     </footer>

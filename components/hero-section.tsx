@@ -24,7 +24,7 @@ export function HeroSection() {
               Hi, I'm <span className="text-primary">Yassine Chaanoune</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground font-medium text-balance">
-              Full Stack Developer & Software Engineer
+              Full Stack Developer
             </p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
               I craft modern web applications with clean code, intuitive design, and cutting-edge technologies.
@@ -41,7 +41,7 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="font-medium bg-transparent" asChild>
-              <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href="/CV-last.pdf" target="_blank" rel="noopener noreferrer">
                 Download Resume
                 <Download className="ml-2 h-4 w-4" />
               </Link>
@@ -52,7 +52,7 @@ export function HeroSection() {
           <div className="pt-8">
             <p className="text-sm text-muted-foreground mb-4">Technologies I work with</p>
             <div className="flex flex-wrap justify-center gap-3">
-              {["React", "Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL", "AWS", "Docker"].map((tech) => (
+              {["React", "TypeScript", "Node.js","Express","Laravel","MongoDB", "Python", "MySQL","JavaScript", "Bootstrap","Tailwind CSS"].map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1 bg-card border border-border rounded-full text-sm font-medium text-card-foreground hover:bg-primary/10 transition-colors"
@@ -66,7 +66,6 @@ export function HeroSection() {
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <Link href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-              <ArrowDown className="h-6 w-6" />
               <span className="sr-only">Scroll to about section</span>
             </Link>
           </div>
