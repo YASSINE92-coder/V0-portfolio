@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, MapPin, Phone, Send } from "lucide-react"
 import { motion } from "framer-motion"
+import emailjs from "emailjs-com";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,8 +31,8 @@ const itemVariants = {
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    reply_to: "",
     subject: "",
     message: "",
   })
@@ -43,18 +45,31 @@ export function ContactSection() {
     }
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", subject: "", message: "" })
-  }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }))
   }
+  const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  emailjs.send(
+    "service_s1k1epv",    // from EmailJS dashboard
+    "template_hv68j6j",   // from EmailJS dashboard
+    formData,
+    "Agp1YqmGfr_zvwkfx"     // from EmailJS dashboard
+  )
+
+  .then(() => {
+    alert("Message sent!");
+    setFormData({ from_name: "", reply_to: "", subject: "", message: "" });
+  })
+  .catch((err) => {
+    console.error("EmailJS Error:", err);
+    alert("Failed to send message.");
+  });
+};
 
   return (
     <section
@@ -176,7 +191,7 @@ export function ContactSection() {
             <Label htmlFor="name">Name *</Label>
             <Input
               id="name"
-              name="name"
+              name="from_name"
               value={formData.name}
               onChange={handleChange}
               required
@@ -187,7 +202,7 @@ export function ContactSection() {
             <Label htmlFor="email">Email *</Label>
             <Input
               id="email"
-              name="email"
+              name="reply_to"
               type="email"
               value={formData.email}
               onChange={handleChange}
