@@ -1,9 +1,9 @@
-# Portfolio UI update
+# Next.js animations
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/yassinechaanoune039-6327s-projects/v0-portfolio-ui-update)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/j7RxTgoRPq7)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/yassinechaanoune039-6327s-projects/v0-next-js-animations)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/9wHPUZ1ztFu)
 
 ## Overview
 
@@ -14,13 +14,13 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 Your project is live at:
 
-**[https://vercel.com/yassinechaanoune039-6327s-projects/v0-portfolio-ui-update](https://vercel.com/yassinechaanoune039-6327s-projects/v0-portfolio-ui-update)**
+**[https://vercel.com/yassinechaanoune039-6327s-projects/v0-next-js-animations](https://vercel.com/yassinechaanoune039-6327s-projects/v0-next-js-animations)**
 
 ## Build your app
 
 Continue building your app on:
 
-**[https://v0.app/chat/projects/j7RxTgoRPq7](https://v0.app/chat/projects/j7RxTgoRPq7)**
+**[https://v0.app/chat/projects/9wHPUZ1ztFu](https://v0.app/chat/projects/9wHPUZ1ztFu)**
 
 ## How It Works
 

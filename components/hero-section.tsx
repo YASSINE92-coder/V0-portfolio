@@ -3,37 +3,71 @@
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Download, ExternalLink } from "lucide-react"
 import Link from "next/link"
+import { motion } from "framer-motion"
+import Plasma from './Plasma';
 
 export function HeroSection() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(10,102,194,0.1),transparent_50%)]" />
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
+      {/* Plasma background absolutely positioned */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Plasma 
+          color="#0079ce"
+          speed={0.6}
+          direction="forward"
+          scale={1.1}
+          opacity={0.6}
+          mouseInteractive={true}
+        />
+      </div>
+      {/* Other background gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%)] z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-8">
-          {/* Profile Image */}
-<br /> <br />    <div className="relative mx-auto w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
-            <img src="/profile-github.jpg" alt="Yassine Chaanoune" className="w-full h-full object-cover" />
-          </div>
-
           {/* Main Heading */}
-          <div className="space-y-4">
-            <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl text-balance">
+          <motion.div
+            className="space-y-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <motion.h1
+              className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl text-balance"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
               Hi, I'm <span className="text-primary">Yassine Chaanoune</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-medium text-balance">
+            </motion.h1>
+            <motion.p
+              className="text-xl md:text-2xl text-muted-foreground font-medium text-balance"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+            >
               Full Stack Developer
-            </p>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+            </motion.p>
+            <motion.p
+              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+            >
               I craft modern web applications with clean code, intuitive design, and cutting-edge technologies.
               Passionate about creating digital experiences that make a difference.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+          >
             <Button size="lg" className="font-medium" asChild>
               <Link href="#projects">
                 View My Work
@@ -46,29 +80,89 @@ export function HeroSection() {
                 <Download className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </div>
+          </motion.div>
 
-          {/* Tech Stack Preview */}
-          <div className="pt-8">
-            <p className="text-sm text-muted-foreground mb-4">Technologies I work with</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {["React", "TypeScript", "Node.js","Express","Laravel","MongoDB", "Python", "MySQL","JavaScript", "Bootstrap","Tailwind CSS"].map((tech) => (
-                <span
+          <motion.div
+            className="pt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
+          >
+            <p className="text-sm text-muted-foreground mb-8">Technologies I work with</p>
+            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+              {[
+                "React",
+                "TypeScript",
+                "Node.js",
+                "Express",
+                "Laravel",
+                "MongoDB",
+                "Python",
+                "MySQL",
+                "JavaScript",
+                "Bootstrap",
+                "Tailwind CSS",
+                "Next.js",
+                "Vue.js",
+                "Docker",
+                "AWS",
+              ].map((tech, index) => (
+                <motion.div
                   key={tech}
-                  className="px-3 py-1 bg-card border border-border rounded-full text-sm font-medium text-card-foreground hover:bg-primary/10 transition-colors"
+                  className="relative group cursor-pointer"
+                  initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 1.5 + index * 0.1,
+                    ease: "easeOut",
+                  }}
+                  whileHover={{
+                    scale: 1.1,
+                    y: -5,
+                    transition: { duration: 0.2 },
+                  }}
                 >
-                  {tech}
-                </span>
+                  <motion.div
+                    className="px-4 py-2 text-sm font-medium text-foreground bg-card/50 backdrop-blur-sm rounded-full border border-border/50 shadow-sm"
+                    animate={{
+                      y: [0, -3, 0],
+                      rotateX: [0, 5, 0],
+                    }}
+                    transition={{
+                      duration: 3 + (index % 3),
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                      delay: index * 0.2,
+                    }}
+                  >
+                    {tech}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      initial={false}
+                    />
+                  </motion.div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <Link href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-              <span className="sr-only">Scroll to about section</span>
-            </Link>
-          </div>
+          <motion.div
+            className="mt-8 flex justify-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 2 }}
+          >
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            >
+              <Link href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+                <ArrowDown className="h-6 w-6" />
+                <span className="sr-only">Scroll to about section</span>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

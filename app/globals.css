@@ -4,83 +4,82 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color scheme to match LinkedIn branding and design brief */
-  --background: oklch(1 0 0); /* Pure white */
-  --foreground: oklch(0.25 0 0); /* Dark gray #374151 */
-  --card: oklch(0.97 0 0); /* Light gray #f1f5f9 */
-  --card-foreground: oklch(0.25 0 0); /* Dark gray */
-  --popover: oklch(1 0 0); /* White */
-  --popover-foreground: oklch(0.25 0 0); /* Dark gray */
-  --primary: oklch(0.45 0.15 250); /* LinkedIn Blue #0A66C2 */
-  --primary-foreground: oklch(1 0 0); /* White text on primary */
-  --secondary: oklch(0.97 0 0); /* Light gray */
-  --secondary-foreground: oklch(0.25 0 0); /* Dark gray */
-  --muted: oklch(0.97 0 0); /* Light gray */
-  --muted-foreground: oklch(0.45 0 0); /* Medium gray #6b7280 */
-  --accent: oklch(0.75 0.15 120); /* Vibrant Green #84cc16 */
-  --accent-foreground: oklch(1 0 0); /* White text on accent */
-  --destructive: oklch(0.55 0.2 25); /* Orange-red #ea580c */
-  --destructive-foreground: oklch(1 0 0); /* White */
-  --border: oklch(0.9 0 0); /* Light border #e5e7eb */
-  --input: oklch(0.97 0 0); /* Light gray input background */
-  --ring: oklch(0.45 0.15 250 / 0.5); /* LinkedIn blue with opacity */
-  --chart-1: oklch(0.45 0.15 250); /* LinkedIn Blue */
-  --chart-2: oklch(0.75 0.15 120); /* Vibrant Green */
-  --chart-3: oklch(0.65 0.2 35); /* Orange */
-  --chart-4: oklch(0.55 0.2 25); /* Orange-red */
-  --chart-5: oklch(0.45 0 0); /* Medium gray */
-  --radius: 0.5rem;
-  --sidebar: oklch(1 0 0); /* White */
-  --sidebar-foreground: oklch(0.25 0 0); /* Dark gray */
-  --sidebar-primary: oklch(0.45 0.15 250); /* LinkedIn Blue */
-  --sidebar-primary-foreground: oklch(1 0 0); /* White */
-  --sidebar-accent: oklch(0.75 0.15 120); /* Vibrant Green */
-  --sidebar-accent-foreground: oklch(1 0 0); /* White */
-  --sidebar-border: oklch(0.9 0 0); /* Light border */
-  --sidebar-ring: oklch(0.45 0.15 250 / 0.5); /* LinkedIn blue with opacity */
+  --background: oklch(0.98 0.01 240);
+  --foreground: oklch(0.15 0.02 240);
+  --card: oklch(0.99 0.005 240);
+  --card-foreground: oklch(0.15 0.02 240);
+  --popover: oklch(0.99 0.005 240);
+  --popover-foreground: oklch(0.15 0.02 240);
+  /* Updated primary to modern blue */
+  --primary: oklch(0.55 0.18 240);
+  --primary-foreground: oklch(0.98 0.01 240);
+  --secondary: oklch(0.95 0.01 240);
+  --secondary-foreground: oklch(0.15 0.02 240);
+  --muted: oklch(0.95 0.01 240);
+  --muted-foreground: oklch(0.55 0.02 240);
+  /* Updated accent to modern purple */
+  --accent: oklch(0.6 0.15 280);
+  --accent-foreground: oklch(0.98 0.01 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.9 0.01 240);
+  --input: oklch(0.9 0.01 240);
+  --ring: oklch(0.7 0.02 240);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  /* Updated dark mode colors to maintain LinkedIn branding */
-  --background: oklch(0.08 0 0); /* Very dark background */
-  --foreground: oklch(0.95 0 0); /* Light text */
-  --card: oklch(0.12 0 0); /* Dark card background */
-  --card-foreground: oklch(0.95 0 0); /* Light text on cards */
-  --popover: oklch(0.12 0 0); /* Dark popover */
-  --popover-foreground: oklch(0.95 0 0); /* Light text */
-  --primary: oklch(0.55 0.15 250); /* Lighter LinkedIn Blue for dark mode */
-  --primary-foreground: oklch(0.08 0 0); /* Dark text on primary */
-  --secondary: oklch(0.15 0 0); /* Dark secondary */
-  --secondary-foreground: oklch(0.95 0 0); /* Light text */
-  --muted: oklch(0.15 0 0); /* Dark muted */
-  --muted-foreground: oklch(0.65 0 0); /* Medium light text */
-  --accent: oklch(0.75 0.15 120); /* Keep vibrant green */
-  --accent-foreground: oklch(0.08 0 0); /* Dark text on accent */
-  --destructive: oklch(0.6 0.2 25); /* Slightly lighter destructive */
-  --destructive-foreground: oklch(0.95 0 0); /* Light text */
-  --border: oklch(0.2 0 0); /* Dark border */
-  --input: oklch(0.15 0 0); /* Dark input */
-  --ring: oklch(0.55 0.15 250 / 0.5); /* LinkedIn blue ring */
-  --chart-1: oklch(0.55 0.15 250); /* LinkedIn Blue */
-  --chart-2: oklch(0.75 0.15 120); /* Vibrant Green */
-  --chart-3: oklch(0.7 0.2 35); /* Orange */
-  --chart-4: oklch(0.6 0.2 25); /* Orange-red */
-  --chart-5: oklch(0.65 0 0); /* Medium gray */
-  --sidebar: oklch(0.1 0 0); /* Dark sidebar */
-  --sidebar-foreground: oklch(0.95 0 0); /* Light text */
-  --sidebar-primary: oklch(0.55 0.15 250); /* LinkedIn Blue */
-  --sidebar-primary-foreground: oklch(0.08 0 0); /* Dark text */
-  --sidebar-accent: oklch(0.75 0.15 120); /* Vibrant Green */
-  --sidebar-accent-foreground: oklch(0.08 0 0); /* Dark text */
-  --sidebar-border: oklch(0.2 0 0); /* Dark border */
-  --sidebar-ring: oklch(0.55 0.15 250 / 0.5); /* LinkedIn blue ring */
+  /* Updated dark mode background to modern gradient colors */
+  --background: oklch(0.08 0.02 240);
+  --foreground: oklch(0.95 0.01 240);
+  --card: oklch(0.1 0.02 240);
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.1 0.02 240);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.65 0.2 240);
+  --primary-foreground: oklch(0.08 0.02 240);
+  --secondary: oklch(0.15 0.02 240);
+  --secondary-foreground: oklch(0.95 0.01 240);
+  --muted: oklch(0.15 0.02 240);
+  --muted-foreground: oklch(0.65 0.02 240);
+  --accent: oklch(0.7 0.18 280);
+  --accent-foreground: oklch(0.08 0.02 240);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.2 0.02 240);
+  --input: oklch(0.2 0.02 240);
+  --ring: oklch(0.4 0.02 240);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
-  /* Added Space Grotesk and DM Sans font imports for modern typography */
-  --font-sans: "DM Sans", var(--font-geist-sans);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: "Space Grotesk", var(--font-geist-sans);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -124,21 +123,9 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
-  }
-  /* Added custom heading font class */
-  .font-heading {
-    font-family: var(--font-heading);
+    /* Added modern gradient background */
+    @apply bg-gradient-to-br from-background via-background to-primary/5 text-foreground;
   }
 }
 
-/* Added smooth scrolling and improved focus styles */
-@layer utilities {
-  .scroll-smooth {
-    scroll-behavior: smooth;
-  }
-
-  .focus-visible-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
-  }
-}
+/* Removed old scrolling animations that are no longer needed */
