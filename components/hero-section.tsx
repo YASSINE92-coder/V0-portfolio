@@ -4,22 +4,12 @@ import { Button } from "@/components/ui/button"
 import { ArrowDown, Download, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import Plasma from './Plasma';
+
 
 export function HeroSection() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
-      {/* Plasma background absolutely positioned */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Plasma 
-          color="#0079ce"
-          speed={0.6}
-          direction="forward"
-          scale={1.1}
-          opacity={0.6}
-          mouseInteractive={true}
-        />
-      </div>
+      
       {/* Other background gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 z-0" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%)] z-0" />
