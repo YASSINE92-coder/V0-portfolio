@@ -4,12 +4,19 @@ import { Button } from "@/components/ui/button"
 import { ArrowDown, Download, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import TextType from './TextType';
+import Magnet from './Magnet'
+import { useState } from 'react'
+
+
 
 
 export function HeroSection() {
+  const [showName, setShowName] = useState(false)
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
-      
+     
+
       {/* Other background gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 z-0" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%)] z-0" />
@@ -30,7 +37,17 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Hi, I'm <span className="text-primary">Yassine Chaanoune</span>
+              <span className="inline">
+                  <TextType
+                    as="span"
+                    text={["Hi , I'm  Yassine Chaanoune"]}
+                    typingSpeed={60}
+                    pauseDuration={800}
+                    showCursor={false}
+                    className="inline ml-1"
+                    loop={false}
+                  />
+              </span>
             </motion.h1>
             <motion.p
               className="text-xl md:text-2xl text-muted-foreground font-medium text-balance"
@@ -46,8 +63,8 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
             >
-              I craft modern web applications with clean code, intuitive design, and cutting-edge technologies.
-              Passionate about creating digital experiences that make a difference.
+        I craft modern web applications with clean code, intuitive design, and cutting-edge technologies.
+        Passionate about creating digital experiences that make a difference.
             </motion.p>
           </motion.div>
 
@@ -58,12 +75,14 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
           >
-            <Button size="lg" className="font-medium" asChild>
-              <Link href="#projects">
-                View My Work
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            <Magnet padding={50} disabled={false} magnetStrength={50}>
+              <Button size="lg" className="font-medium" asChild>
+                <Link href="#projects">
+                  View My Work
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </Magnet>
             <Button variant="outline" size="lg" className="font-medium bg-transparent" asChild>
               <Link href="/CV-last.pdf" target="_blank" rel="noopener noreferrer">
                 Download Resume
