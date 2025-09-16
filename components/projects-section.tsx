@@ -213,9 +213,9 @@ export function ProjectsSection() {
           {featuredProjects.map((project, index) => (
             <motion.div key={project.title} variants={itemVariants}>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
-                  <motion.div
-                    className={`relative ${index % 2 === 1 ? "lg:col-start-2" : ""}`}
+                <div className={`grid lg:grid-cols-2 gap-6 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
+                    <motion.div
+                    className={`relative w-full ${index % 2 === 1 ? "lg:col-start-2" : ""}`}
                     initial={{ opacity: 0, x: index % 2 === 1 ? 50 : -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -227,7 +227,8 @@ export function ProjectsSection() {
                           <img
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
-                            className="w-full h-64 lg:h-full object-cover transition-transform group-hover:scale-105"
+                            loading="lazy"
+                            className="w-full h-56 sm:h-64 md:h-72 lg:h-full object-cover transition-transform group-hover:scale-105"
                           />
                           <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
@@ -240,7 +241,7 @@ export function ProjectsSection() {
                     </Dialog>
                   </motion.div>
                   <motion.div
-                    className={`p-8 flex flex-col justify-center ${index % 2 === 1 ? "lg:col-start-1" : ""}`}
+                    className={`p-6 sm:p-8 flex flex-col justify-center ${index % 2 === 1 ? "lg:col-start-1" : ""}`}
                     initial={{ opacity: 0, x: index % 2 === 1 ? -50 : 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -248,7 +249,7 @@ export function ProjectsSection() {
                   >
                     <CardHeader className="p-0 mb-4">
                       <CardTitle className="font-heading text-2xl mb-2">{project.title}</CardTitle>
-                      <p className="text-muted-foreground text-pretty">{project.description}</p>
+                      <p className="text-muted-foreground text-pretty break-words">{project.description}</p>
                     </CardHeader>
                     <CardContent className="p-0 space-y-4">
                       <div className="flex flex-wrap gap-2">
@@ -268,7 +269,7 @@ export function ProjectsSection() {
                         ))}
                       </div>
                       <motion.div
-                        className="flex gap-3"
+                        className="flex flex-wrap gap-3"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
@@ -336,7 +337,8 @@ export function ProjectsSection() {
                           <img
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
-                            className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                                loading="lazy"
+                                className="w-full h-44 sm:h-48 md:h-56 object-cover transition-transform group-hover:scale-105"
                           />
                           <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <div className="bg-white/20 backdrop-blur-sm rounded-full p-2">

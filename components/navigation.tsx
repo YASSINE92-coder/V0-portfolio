@@ -54,41 +54,45 @@ export function Navigation() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link
-              href="#home"
-              className="font-heading font-bold text-xl text-primary hover:text-primary/80 transition-colors"
-            >
-              YC
-            </Link>
-          </motion.div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
+        <div className="flex items-center h-16">
+          {/* Left: Logo */}
+          <div className="flex-shrink-0">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href="#home"
+                className="font-heading font-bold text-xl text-primary hover:text-primary/80 transition-colors"
               >
-                <Link
-                  href={item.href}
-                  className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary",
-                    activeSection === item.href.slice(1) ? "text-primary" : "text-muted-foreground",
-                  )}
-                >
-                  {item.name}
-                </Link>
-              </motion.div>
-            ))}
+                YC
+              </Link>
+            </motion.div>
           </div>
 
-          {/* Theme Toggle and Social Links */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Center: Desktop Navigation (centered) */}
+          <div className="hidden md:flex md:flex-1 md:justify-center items-center">
+            <div className="flex items-center space-x-8">
+              {navigation.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
+                >
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "text-sm font-medium transition-colors hover:text-primary",
+                      activeSection === item.href.slice(1) ? "text-primary" : "text-muted-foreground",
+                    )}
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Theme Toggle and Social Links */}
+          <div className="hidden md:flex items-center space-x-4 md:ml-auto">
             {mounted && (
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                 <Button variant="ghost" size="sm" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
@@ -123,15 +127,21 @@ export function Navigation() {
             </motion.div>
           </div>
 
-          {/* Mobile menu button */}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button variant="ghost" size="sm" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-              <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {/* Right side container for mobile button (visible) and desktop icons (hidden on mobile) */}
+          <div className="flex items-center ml-auto md:ml-0">
+            <div className="md:hidden">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
+                  <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                    {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                  </motion.div>
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
               </motion.div>
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </motion.div>
+            </div>
+
+            {/* Desktop icons are already present in the markup above (hidden on mobile) */}
+          </div>
         </div>
 
         {/* Mobile Navigation */}

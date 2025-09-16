@@ -5,7 +5,6 @@ import { ProjectsSection } from "@/components/projects-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import SplashCursor from '@/components/SplashCursor'
-
 export default function Home() {
   return (
     <main className="min-h-screen">

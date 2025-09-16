@@ -9,21 +9,19 @@ import Magnet from './Magnet'
 import { useState } from 'react'
 
 
-
-
 export function HeroSection() {
   const [showName, setShowName] = useState(false)
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" >
-     
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-0" >
+  {/* pt-20 (5rem) on mobile to offset nav, no extra padding on md+ */}
 
-      {/* Other background gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 z-0" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%)] z-0" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] z-0" />
+  {/* Other background gradients */}
+  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 z-0" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%)] z-0" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] z-0" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center space-y-8">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="text-center space-y-8">
           {/* Main Heading */}
           <motion.div
             className="space-y-4"
