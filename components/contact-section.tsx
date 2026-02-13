@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, MapPin, Phone, Send } from "lucide-react"
 import { motion } from "framer-motion"
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser"
 
 
 const containerVariants = {
@@ -25,7 +25,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6 },
   },
 }
 
@@ -65,7 +65,7 @@ export function ContactSection() {
     alert("Message sent!");
     setFormData({ from_name: "", reply_to: "", subject: "", message: "" });
   })
-  .catch((err) => {
+  .catch((err: unknown) => {
     console.error("EmailJS Error:", err);
     alert("Failed to send message.");
   });
@@ -192,7 +192,7 @@ export function ContactSection() {
             <Input
               id="name"
               name="from_name"
-              value={formData.name}
+              value={formData.from_name}
               onChange={handleChange}
               required
               placeholder="Your full name"
@@ -204,7 +204,7 @@ export function ContactSection() {
               id="email"
               name="reply_to"
               type="email"
-              value={formData.email}
+              value={formData.reply_to}
               onChange={handleChange}
               required
               placeholder="your.email@example.com"
