@@ -12,7 +12,7 @@ import { useState } from 'react'
 export function HeroSection() {
   const [showName, setShowName] = useState(false)
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-0" >
+    <section id="home" className="min-h-[calc(100vh-5rem)] flex items-center justify-center relative overflow-hidden pt-20 md:pt-0" >
   {/* pt-20 (5rem) on mobile to offset nav, no extra padding on md+ */}
 
   {/* Other background gradients */}
@@ -105,14 +105,9 @@ export function HeroSection() {
                 "Laravel",
                 "MongoDB",
                 "Python",
-                "MySQL",
+                "PostgreSQL",
                 "JavaScript",
-                "Bootstrap",
                 "Tailwind CSS",
-                "Next.js",
-                "Vue.js",
-                "Docker",
-                "AWS",
               ].map((tech, index) => (
                 <motion.div
                   key={tech}

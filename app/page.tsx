@@ -4,11 +4,11 @@ import { AboutSection } from "@/components/about-section"
 import { ProjectsSection } from "@/components/projects-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
-import SplashCursor from '@/components/SplashCursor'
+import { SmoothCursor } from "@/registry/magicui/smooth-cursor"
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <SplashCursor />
+      <SmoothCursor />
       <Navigation />
       <HeroSection />
       <AboutSection />

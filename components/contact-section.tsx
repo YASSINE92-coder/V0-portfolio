@@ -55,10 +55,10 @@ export function ContactSection() {
   e.preventDefault();
 
   emailjs.send(
-    "service_s1k1epv",    // from EmailJS dashboard
-    "template_hv68j6j",   // from EmailJS dashboard
+    "service_fnnv2du",    // from EmailJS dashboard
+    "template_fwucidf",   // from EmailJS dashboard
     formData,
-    "Agp1YqmGfr_zvwkfx"     // from EmailJS dashboard
+    "_DiW-lprOyslaDucg"     // from EmailJS dashboard
   )
 
   .then(() => {
@@ -125,7 +125,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground">yassinechaanoune039@email.com</p>
+                  <p className="text-muted-foreground">contact.yassine.chaanoune@gmail.com</p>
                 </div>
               </motion.div>
 
@@ -157,7 +157,7 @@ export function ContactSection() {
                 <h4 className="font-semibold mb-2">Quick Response</h4>
                 <p className="text-sm text-muted-foreground">
                   I typically respond to messages within 24 hours. For urgent inquiries, feel free to reach out via
-                  LinkedIn or email directly.
+                  LinkedIn or phone directly.
                 </p>
               </CardContent>
             </Card>

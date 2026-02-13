@@ -87,7 +87,7 @@ export function Footer() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                 <Button variant="ghost" size="sm" asChild>
-                  <Link href="mailto:yassinechaanoune039@email.com">
+                  <Link href="mailto:contact.yassine.chaanoune@gmail.com">
                     <Mail className="h-4 w-4" />
                     <span className="sr-only">Email</span>
                   </Link>

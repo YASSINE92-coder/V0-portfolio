@@ -11,6 +11,19 @@ import { motion } from "framer-motion"
 
 const projects = [
   {
+    title: "voucher codes distribution system",
+    description:
+      "Features include user inscription after KYC validation from admin panel, authentication, pass orders and view orders history in charts and generate invoices , manage company's agents , manage the user wallets and more features.",
+    image: "/distripin.png",
+    images: [
+      "/distripin.png",
+    ],
+    technologies: ["TypeScript", "react","PostgreSQL", "Express"],
+    liveUrl: "distripi.lovable.com",
+    githubUrl: "https://github.com/YASSINE92-coder/voucher-codes-distribution-system",
+    featured: true,
+  },
+  {
     title: "Hotel management system",
     description:
       "Features include user inscription, authentication, filtering suites , adding comments , booking management, room inventory, and admin dashboard.",
@@ -23,7 +36,7 @@ const projects = [
     ],
     technologies: ["JavaScript", "Laravel", "MySQL"],
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/YASSINE92-coder/ecommerce-platform",
+    githubUrl: "https://github.com/YASSINE92-coder/hotel-management-system",
     featured: true,
   },
   {
@@ -38,13 +51,13 @@ const projects = [
     ],
     technologies: ["Express", "MongoDB", "JavaScript", "Tailwind CSS"],
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/YASSINE92-coder/task-manager",
+    githubUrl: "https://github.com/YASSINE92-coder/product-manager",
     featured: true,
   },
   {
     title: "Movies App",
     description:
-      "A backend service for a movies application that provides movie data and recommendations using chatboot integration.",
+      "A frontend website for a movies application that provides movie data and recommendations using chatboot integration.",
     image: "/movieapp.png",
     images: [
       "/movieapp.png",
@@ -54,7 +67,7 @@ const projects = [
     ],
     technologies: ["Vue.js", "Chart.js", "Express", "MongoDB", "OpenWeather API"],
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/YASSINE92-coder/weather-dashboard",
+    githubUrl: "https://github.com/YASSINE92-coder/movies-app",
     featured: false,
   },
   {
@@ -70,7 +83,7 @@ const projects = [
     ],
     technologies: ["node.js", "Express", "OpenWeather API"],
     liveUrl: "https://api-docs.example.com",
-    githubUrl: "https://github.com/YASSINE92-coder/social-api",
+    githubUrl: "https://github.com/YASSINE92-coder/weather-app",
     featured: false,
   },
   {
@@ -86,7 +99,7 @@ const projects = [
     ],
     technologies: ["HTML", "JavaScript", "Bootstrap"],
     liveUrl: "https://yassine-portfolio.com",
-    githubUrl: "https://github.com/YASSINE92-coder/portfolio",
+    githubUrl: "https://github.com/YASSINE92-coder",
     featured: false,
   },
 ]
@@ -114,8 +127,6 @@ function ProjectModal({ project }: { project: (typeof projects)[0] }) {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4" />
-          <CarouselNext className="right-4" />
         </Carousel>
 
         {/* Project Details */}
@@ -228,7 +239,7 @@ export function ProjectsSection() {
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                             loading="lazy"
-                            className="w-full h-56 sm:h-64 md:h-72 lg:h-full object-cover transition-transform group-hover:scale-105"
+                            className="w-full h-56 sm:h-64 md:h-72 lg:h-full object-cover transition-transform"
                           />
                           <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
@@ -338,7 +349,7 @@ export function ProjectsSection() {
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                                 loading="lazy"
-                                className="w-full h-44 sm:h-48 md:h-56 object-cover transition-transform group-hover:scale-105"
+                                className="w-full h-44 sm:h-48 md:h-56 object-cover transition-transform"
                           />
                           <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <div className="bg-white/20 backdrop-blur-sm rounded-full p-2">
