@@ -40,7 +40,7 @@ export function SmoothCursor({
   className
 }: SmoothCursorProps) {
   const cursorRef = useRef<HTMLDivElement>(null)
-  const frameRef = useRef<number>()
+  const frameRef = useRef<number | null>(null)
   const positionRef = useRef({ x: 0, y: 0 })
   const targetRef = useRef({ x: 0, y: 0 })
   const velocityRef = useRef({ x: 0, y: 0 })
